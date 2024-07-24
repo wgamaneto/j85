@@ -4,8 +4,8 @@ import { Navbar, Footer } from "@/components";
 // sections
 import Hero from "./hero";
 import Services from "./servicos";
-import StudentsFeedback from "./students-feedback";
-import TrustedCompany from "./trusted-companies";
+import StudentsFeedback from "./feedback";
+import Localization from "./Localization";
 
 export default function Campaign() {
   return (
@@ -14,7 +14,7 @@ export default function Campaign() {
       <Hero />
       <Services />
       <StudentsFeedback />
-      <TrustedCompany />
+      <Localization />
       <Footer />
     </>
   );

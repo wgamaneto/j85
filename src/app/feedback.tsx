@@ -3,46 +3,41 @@ import React from "react";
 import FeedbackCard from "@/components/feedback-card";
 import { Typography } from "@material-tailwind/react";
 
-
 const FEEDBACKS = [
   {
     feedback:
-      "The instructors are top-notch, and the hands-on approach to learning is incredibly effective.",
-    client: "Jessica Devis",
-    title: "Web Developer @ MARKETING DIGITAL LTD.",
+      "Resultado Maravilhoso! Não poderia estar mais satisfeito com o serviço de estética automotiva que recebi. A atenção aos detalhes e o uso de produtos de alta qualidade fizeram toda a diferença.",
+    client: "Liz Matos",
     img: "/image/avatar1.jpg",
   },
   {
     feedback:
-      "I went from knowing nothing about web development to landing my dream job as a frontend developer.",
-    client: "Linde Michel",
-    title: "Web Developer @ APPLE INC.",
+      "Excelente Atendimento! Fiquei impressionado com a eficiência e a dedicação do time. Desde o polimento até a higienização interna, tudo foi feito com muita precisão e cuidado. Meu carro parece novo de novo!",
+    client: "Washington Gama",
     img: "/image/avatar3.jpg",
   },
   {
     feedback:
-      "The courses are structured well, and the projects helped me build a strong portfolio.",
-    client: "Misha Stam",
-    title: "Web Developer @ APPLE INC.",
+      "Serviço Impecável! Meu carro nunca esteve tão brilhante e bem cuidado. A equipe foi extremamente profissional e atenciosa aos detalhes. Recomendo fortemente para quem busca um serviço de alta qualidade.",
+    client: "Amanda Zanata",
     img: "/image/avatar2.jpg",
   },
 ];
 
 export function StudentsFeedback() {
   return (
-    <section className="px-8 py-36">
+    <section className="px-8">
       <div className="container mx-auto">
         <div className="mb-16 flex flex-col items-center w-full">
           <Typography variant="h2" color="blue-gray" className="mb-2">
-            What Our Students Are Saying
+            O que nossos clientes estao comentando.
           </Typography>
           <Typography
             variant="lead"
             className="mb-10 max-w-3xl lg:text-center !text-gray-500"
           >
-            Our mission is to empower individuals with the knowledge and skills
-            they need to succeed in the world of web development. But don&apos;t
-            just take our word for it.
+            Trabalhamos para entregar um servico de alta qualidade e um
+            atendimento impar para fidelizar todos os nossos clientes.
           </Typography>
         </div>
         <div className="grid gap-x-8 gap-y-12 lg:px-32 grid-cols-1 md:grid-cols-3">
@@ -54,6 +49,5 @@ export function StudentsFeedback() {
     </section>
   );
 }
-
 
 export default StudentsFeedback;

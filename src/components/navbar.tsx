@@ -41,43 +41,55 @@ export function Navbar() {
   const [open, setOpen] = React.useState(false);
 
   function handleOpen() {
-    setOpen((cur) => !cur);
+    setOpen((prev) => !prev);
+  }
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function scrollToBottom() {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: "smooth",
+    });
   }
 
   React.useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setOpen(false)
-    );
+    const handleResize = () => {
+      if (window.innerWidth >= 960) setOpen(false);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
-    <div className="px-10 sticky top-4 z-50">
-      <div className="mx-auto container">
+    <div className="px-4 lg:px-10 sticky top-4 z-50">
+      <div className="container mx-auto">
         <MTNavbar
           blurred
           color="white"
-          className="z-50 mt-6 relative border-0 pr-3 py-3 pl-6"
+          className="relative border-0 pr-3 py-3 pl-6"
         >
-          <div className="h-[60px] flex items-center justify-around">
+          <div className="flex items-center justify-between h-[60px]">
             <Image
               src={logo}
-              alt="WhatsApp"
+              alt="J85 Logo"
               width={120}
               height={120}
-              className="h-[140px] xl:w-[140px] flex items-center overflow-show rounded-xl justify-center col-span-2 h-full"
+              className="h-[140px] xl:w-[140px] rounded-xl"
             />
-            <Typography
-              color="blue-gray"
-              className="text-lg font-bold"
-            ></Typography>
-            <div className="hidden items-center gap-4 lg:flex">
-              <Button variant="text">Inicio</Button>
+            <div className="hidden lg:flex items-center gap-4">
+              <Button variant="text" onClick={scrollToTop}>
+                Inicio
+              </Button>
               <Button variant="text">Servicos</Button>
-              <Button variant="text">Higienizacao interna</Button>
-              <Button variant="text">Sobre nos</Button>
+              <Button variant="text">Clientes</Button>
+              <Button variant="text" onClick={scrollToBottom}>
+                Localização
+              </Button>
             </div>
-            <ul className="ml-10 hidden items-center gap-8 lg:flex">
+            <ul className="hidden lg:flex ml-10 items-center gap-8">
               <NavItem href="#">
                 <Image src={facebook} alt="Facebook" width={30} height={30} />
               </NavItem>
@@ -95,29 +107,16 @@ export function Navbar() {
               variant="text"
               color="gray"
               onClick={handleOpen}
-              className="ml-auto inline-block lg:hidden"
+              className="lg:hidden"
+              aria-label="Toggle navigation"
             >
               {open ? (
-                <XMarkIcon strokeWidth={2} className="h-6 w-6" />
+                <XMarkIcon strokeWidth={1} className="h-6 w-6" />
               ) : (
-                <Bars3Icon strokeWidth={2} className="h-6 w-6" />
+                <Bars3Icon strokeWidth={1} className="h-6 w-6" />
               )}
             </IconButton>
           </div>
-          <Collapse open={open}>
-            <div className="container mx-auto mt-3 border-t border-gray-200 px-2 pt-4">
-              <ul className="flex flex-col gap-4"></ul>
-              <div className="mt-6 mb-4 flex items-center gap-4">
-                <Button variant="text">Log in</Button>
-                <a
-                  href="https://www.material-tailwind.com/blocks"
-                  target="_blank"
-                >
-                  <Button color="gray">blocks</Button>
-                </a>
-              </div>
-            </div>
-          </Collapse>
         </MTNavbar>
       </div>
     </div>

@@ -33,36 +33,6 @@ function Hero() {
             <div className="mb-8 flex justify-center gap-4 lg:justify-start">
               <Button color="gray">Entre em contato</Button>
             </div>
-            {/* <div className="grid grid-cols-2 lg:grid-cols-4 items-center justify-between gap-4 lg:justify-start">
-              <Image
-                width={144}
-                height={144}
-                className="w-36 grayscale opacity-60"
-                src="/logos/logo-pinterest.svg"
-                alt="pinterest"
-              />
-              <Image
-                width={144}
-                height={144}
-                className="w-36 grayscale opacity-60"
-                src="/logos/logo-netflix.svg"
-                alt="netflix"
-              />
-              <Image
-                width={144}
-                height={144}
-                className="w-36 grayscale opacity-60"
-                src="/logos/logo-coinbase.svg"
-                alt="coinbase"
-              />
-              <Image
-                width={144}
-                height={144}
-                className="w-36 grayscale opacity-60"
-                src="/logos/logo-google.svg"
-                alt="google"
-              />
-            </div> */}
           </Card>
         </div>
       </div>
