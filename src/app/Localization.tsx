@@ -3,15 +3,6 @@
 import React from "react";
 import { Typography } from "@material-tailwind/react";
 
-const COMPANIES = [
-  "coinbase",
-  "spotify",
-  "pinterest",
-  "google",
-  "amazon",
-  "netflix",
-];
-
 function TrustedCompany() {
   return (
     <section className="py-8 px-8 lg:py-20">

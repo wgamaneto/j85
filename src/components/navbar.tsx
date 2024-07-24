@@ -1,7 +1,7 @@
+// Navbar.tsx
 import React from "react";
 import {
   Navbar as MTNavbar,
-  Collapse,
   Button,
   IconButton,
   Typography,
@@ -44,6 +44,13 @@ export function Navbar() {
     setOpen((prev) => !prev);
   }
 
+  function scrollToElement(id: string) {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
@@ -79,17 +86,27 @@ export function Navbar() {
               height={120}
               className="h-[140px] xl:w-[140px] rounded-xl"
             />
-            <div className="hidden lg:flex items-center gap-4">
+            <div className="hidden lg:flex items-center gap-3">
               <Button variant="text" onClick={scrollToTop}>
                 Inicio
               </Button>
-              <Button variant="text">Servicos</Button>
-              <Button variant="text">Clientes</Button>
+              <Button
+                variant="text"
+                onClick={() => scrollToElement("servicos")}
+              >
+                Servicos
+              </Button>
+              <Button
+                variant="text"
+                onClick={() => scrollToElement("feedback")}
+              >
+                Clientes
+              </Button>
               <Button variant="text" onClick={scrollToBottom}>
                 Localização
               </Button>
             </div>
-            <ul className="hidden lg:flex ml-10 items-center gap-8">
+            <ul className="hidden lg:flex ml-8 justify-left gap-6">
               <NavItem href="#">
                 <Image src={facebook} alt="Facebook" width={30} height={30} />
               </NavItem>

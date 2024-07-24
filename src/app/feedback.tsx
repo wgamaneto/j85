@@ -26,7 +26,7 @@ const FEEDBACKS = [
 
 export function StudentsFeedback() {
   return (
-    <section className="px-8">
+    <section id="feedback" className="px-8">
       <div className="container mx-auto">
         <div className="mb-16 flex flex-col items-center w-full">
           <Typography variant="h2" color="blue-gray" className="mb-2">
