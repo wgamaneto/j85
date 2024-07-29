@@ -28,12 +28,12 @@ function Hero() {
               ESTÉTICA AUTOMOTIVA
             </Typography>
             <Typography variant="lead" className="mb-10 mt-6 !text-gray-900">
-              A adoção de técnicas que vão desde limpeza do veículo, serviços de
+              Adoção de técnicas que vão desde limpeza do veículo, serviços de
               recuperação de pintura e peças desgastadas, até detalhes e
               personalização do seu carro.
             </Typography>
             <div className="mb-8 flex justify-center gap-4 lg:justify-start">
-              <Link href="/contato" passHref>
+              <Link href="https://wa.me/message/47DEWPGQMSAWH1" passHref>
                 <Button color="gray">Entre em contato</Button>
               </Link>
             </div>
