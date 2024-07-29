@@ -1,4 +1,6 @@
 // @ts-nocheck
+"use client";
+
 import React from "react";
 import FeedbackCard from "@/components/feedback-card";
 import { Typography } from "@material-tailwind/react";
