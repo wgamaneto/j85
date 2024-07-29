@@ -107,16 +107,16 @@ export function Navbar() {
               </Button>
             </div>
             <ul className="hidden lg:flex ml-8 justify-left gap-6">
-              <NavItem href="#">
+              <NavItem href="https://www.facebook.com/profile.php?id=61550896696717&mibextid=ZbWKwL">
                 <Image src={facebook} alt="Facebook" width={30} height={30} />
               </NavItem>
-              <NavItem href="#">
+              <NavItem href="https://www.instagram.com/garagem_j85?igsh=MXM0azVwemFuY2c4NA==">
                 <Image src={instagram} alt="Instagram" width={30} height={30} />
               </NavItem>
-              <NavItem href="#">
+              <NavItem href="https://www.tiktok.com/@garagem_j85?_t=8oQVWPaavm1&_r=1">
                 <Image src={tiktok} alt="TikTok" width={30} height={30} />
               </NavItem>
-              <NavItem href="#">
+              <NavItem href="https://wa.me/message/47DEWPGQMSAWH1">
                 <Image src={whatsapp} alt="WhatsApp" width={30} height={30} />
               </NavItem>
             </ul>

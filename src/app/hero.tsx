@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Button, Typography, Card } from "@material-tailwind/react";
 
 import imagem1 from "../assets/images/imagem2.jpg";
@@ -31,7 +32,9 @@ function Hero() {
               personalização do seu carro.
             </Typography>
             <div className="mb-8 flex justify-center gap-4 lg:justify-start">
-              <Button color="gray">Entre em contato</Button>
+              <Link href="https://wa.me/message/47DEWPGQMSAWH1" passHref>
+                <Button color="gray">Entre em contato</Button>
+              </Link>
             </div>
           </Card>
         </div>
