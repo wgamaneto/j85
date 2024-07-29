@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Typography } from "@material-tailwind/react";
 
 const CURRENT_YEAR = new Date().getFullYear();

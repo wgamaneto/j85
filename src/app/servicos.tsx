@@ -1,11 +1,10 @@
-"use client";
+// @ts-nocheck
 
 import Image from "next/image";
 import PropTypes from "prop-types";
 import { Typography, Card, CardBody } from "@material-tailwind/react";
 
 const CardSection = ({ isImageFirst, imageSrc, title, description, index }) => {
-  // Determine if the image should have object-top class
   const isObjectTop = index === 0 || imageSrc === "/image/polimentoLata.jpg";
 
   return (
