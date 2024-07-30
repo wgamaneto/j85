@@ -9,7 +9,7 @@ import imagem1 from "../assets/images/imagem2.jpg";
 
 function Hero() {
   return (
-    <div className="!flex h-[65vh] w-full items-center justify-between px-10 mb-10">
+    <div className="!flex h-[68vh] w-full items-center justify-between px-10 mb-10">
       <Image
         width={1200}
         height={1200}
