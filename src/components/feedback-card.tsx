@@ -1,6 +1,15 @@
+// @ts-nocheck
+"use client";
+
 import React from "react";
 
-import { Typography, Card, CardBody, Avatar, Rating } from "@material-tailwind/react";
+import {
+  Typography,
+  Card,
+  CardBody,
+  Avatar,
+  Rating,
+} from "@material-tailwind/react";
 
 interface FeedbackCardProps {
   img: string;
@@ -9,7 +18,12 @@ interface FeedbackCardProps {
   title: string;
 }
 
-export function FeedbackCard({ img, feedback, client, title }: FeedbackCardProps) {
+export function FeedbackCard({
+  img,
+  feedback,
+  client,
+  title,
+}: FeedbackCardProps) {
   return (
     <Card shadow={false} className="items-start text-left">
       <CardBody>
