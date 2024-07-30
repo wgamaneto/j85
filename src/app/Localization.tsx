@@ -10,7 +10,7 @@ function TrustedCompany() {
       <div className="container mx-auto grid items-center place-items-center">
         <div className="mt-16 text-center">
           <Typography variant="h6" className="mb-4 uppercase !text-gray-500">
-            Nossa localizacao
+            Nossa localização
           </Typography>
           <Typography variant="h4" color="blue-gray" className="mb-12">
             Nos encontre no Google Maps

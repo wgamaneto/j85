@@ -38,8 +38,8 @@ export function StudentsFeedback() {
             variant="lead"
             className="mb-10 max-w-3xl lg:text-center !text-gray-500"
           >
-            Trabalhamos para entregar um servico de alta qualidade e um
-            atendimento impar para fidelizar todos os nossos clientes.
+            Trabalhamos para entregar um serviço de alta qualidade e um
+            atendimento ímpar para fidelizar todos os nossos clientes.
           </Typography>
         </div>
         <div className="grid gap-x-8 gap-y-12 lg:px-32 grid-cols-1 md:grid-cols-3">
