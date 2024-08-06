@@ -9,25 +9,27 @@ const CardSection = ({ isImageFirst, imageSrc, title, description, index }) => {
   const isObjectTop = index === 0 || imageSrc === "/image/polimentoLata.jpg";
 
   return (
-    <CardBody className="col-span-full gap-1 place-items-center overflow-visible grid grid-cols-1 lg:grid-cols-4">
-      {isImageFirst && (
-        <div
-          className={`h-[400px] xl:w-[624px] flex items-start overflow-hidden rounded-xl justify-right col-span-2 ${
-            index === 0 ? "mt-4" : ""
+    <CardBody className="grid grid-cols-1 gap-4 lg:grid-cols-4 lg:gap-1 lg:place-items-center overflow-visible">
+      <div
+        className={`h-[400px] xl:w-[624px] flex items-start overflow-hidden rounded-xl justify-center lg:justify-start lg:col-span-2 ${
+          index === 0 ? "mt-4" : ""
+        } ${isImageFirst ? "lg:order-1" : "lg:order-2"} order-1`}
+      >
+        <Image
+          width={624}
+          height={400}
+          src={imageSrc}
+          alt={title}
+          className={`w-full h-full scale-80 object-cover transition-transform duration-300 hover:scale-125 ${
+            isObjectTop ? "object-top" : ""
           }`}
-        >
-          <Image
-            width={624}
-            height={400}
-            src={imageSrc}
-            alt={title}
-            className={`w-full h-full scale-80 object-cover transition-transform duration-300 hover:scale-125 ${
-              isObjectTop ? "object-top" : ""
-            }`}
-          />
-        </div>
-      )}
-      <div className="col-span-2 w-full text-center">
+        />
+      </div>
+      <div
+        className={`col-span-2 w-full text-center ${
+          isImageFirst ? "lg:order-2" : "lg:order-1"
+        } order-2`}
+      >
         <Typography variant="h2" color="blue-gray" className="mb-4 font-bold">
           {title}
         </Typography>
@@ -35,19 +37,6 @@ const CardSection = ({ isImageFirst, imageSrc, title, description, index }) => {
           {description}
         </Typography>
       </div>
-      {!isImageFirst && (
-        <div className="h-[400px] xl:w-[624px] flex items-center overflow-hidden rounded-xl justify-center col-span-2">
-          <Image
-            width={624}
-            height={400}
-            src={imageSrc}
-            alt={title}
-            className={`w-full h-full scale-80 object-cover transition-transform duration-300 hover:scale-125 ${
-              isObjectTop ? "object-top" : ""
-            }`}
-          />
-        </div>
-      )}
     </CardBody>
   );
 };
