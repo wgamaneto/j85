@@ -134,6 +134,49 @@ export function Navbar() {
               )}
             </IconButton>
           </div>
+          {open && (
+            <div className="lg:hidden absolute top-16 left-0 w-full bg-white shadow-lg p-4">
+              <ul className="flex flex-col items-center gap-4">
+                <Button onClick={() => scrollToTop()}>Inicio</Button>
+                <Button onClick={() => scrollToElement("servicos")}>
+                  Servicos
+                </Button>
+                <Button onClick={() => scrollToElement("feedback")}>
+                  Clientes
+                </Button>
+                <Button onClick={() => scrollToBottom()}>Localização</Button>
+                <div className="flex gap-4 mt-4">
+                  <NavItem href="https://www.facebook.com/profile.php?id=61550896696717&mibextid=ZbWKwL">
+                    <Image
+                      src={facebook}
+                      alt="Facebook"
+                      width={30}
+                      height={30}
+                    />
+                  </NavItem>
+                  <NavItem href="https://www.instagram.com/garagem_j85?igsh=MXM0azVwemFuY2c4NA==">
+                    <Image
+                      src={instagram}
+                      alt="Instagram"
+                      width={30}
+                      height={30}
+                    />
+                  </NavItem>
+                  <NavItem href="https://www.tiktok.com/@garagem_j85?_t=8oQVWPaavm1&_r=1">
+                    <Image src={tiktok} alt="TikTok" width={30} height={30} />
+                  </NavItem>
+                  <NavItem href="https://wa.me/message/47DEWPGQMSAWH1">
+                    <Image
+                      src={whatsapp}
+                      alt="WhatsApp"
+                      width={30}
+                      height={30}
+                    />
+                  </NavItem>
+                </div>
+              </ul>
+            </div>
+          )}
         </MTNavbar>
       </div>
     </div>
